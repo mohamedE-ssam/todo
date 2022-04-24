@@ -35,6 +35,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
   final List<String> _repeatList = ['None', 'Daily', 'Weekly', 'Monthly'];
   //------------------------------------
   int _selectcolor = 0;
+  int? id;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -271,6 +272,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
     ))
         .then((value) {
       debugPrint('$value');
+      id = value;
     }).catchError((e) {
       debugPrint('$e error');
     });
@@ -286,6 +288,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
       int.parse(hour),
       int.parse(minutes),
       Task(
+        id: id,
         title: _titlecontroller.text,
         note: _notecontroller.text,
         date: DateFormat.yMd().format(_selectedDate),

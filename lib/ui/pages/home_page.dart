@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
               Get.snackbar('Success', 'All tasks deleted',
                   backgroundColor: Theme.of(context).primaryColor,
                   snackPosition: SnackPosition.BOTTOM,
-                  colorText: Colors.white);
+                  colorText: Get.isDarkMode ? Colors.black : Colors.white);
             },
             icon: const Icon(Icons.cleaning_services_outlined),
           ),
