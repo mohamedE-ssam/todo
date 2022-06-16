@@ -79,6 +79,7 @@ class NotifyHelper {
       channelDescription: 'your channel description',
       importance: Importance.max,
       priority: Priority.high,
+      
     );
 //*****************
     const IOSNotificationDetails iosPlatformChannelSpecifics =
@@ -107,6 +108,7 @@ class NotifyHelper {
               'your channel id', 'your channel name',
               channelDescription: 'your channel description')),
       androidAllowWhileIdle: true,
+
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.time,
